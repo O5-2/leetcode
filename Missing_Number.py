@@ -4,6 +4,5 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        s = set([i for i in range(0,len(nums)+1)])
-        t = s - set(nums)
-        return list(t)[0]
+        x = len(nums)
+        return ((x*x)+x)/2 - sum(nums)

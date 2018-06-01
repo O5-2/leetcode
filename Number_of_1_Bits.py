@@ -4,14 +4,9 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-        count = 1
-        if n == 0:
-            return 0
-        if n == 1:
-            return 1
-        for i in range(3, len(bin(n))):
-            if i == 3:
-                count = 0
-            if bin(n)[i] == "1":
-                count += 1
-        return count
+        m = bin(n)[2:]
+        ans = 0
+        for i in m:
+            if i == "1":
+                ans += 1
+        return ans
